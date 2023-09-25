@@ -1,0 +1,11 @@
+Alguns eleitores válidos para testar na aplicação caso o ficheiro eleicao1.elec seja carregado (esse ficheiro está na pasta EleicoesCriadas):
+
+Francesca Cobra nº cartão do cidadão: 22987375 password: yA5JCS<khv
+João Carvalho nº cartão do cidadão: 12341234 password: 123
+Vladimir Café nº cartão do cidadão: 75393328 password: QifK#%mqk4
+
+Alguns eleitores não válidos caso o ficheiro eleicao1.elec seja carregado:
+
+Igor Quinzeiro nº cartão do cidadão: 13088479 password: MmZXiqVA?& (o eleitor é menor de idade)
+Zélia Homem nº cartão do cidadão: 91252723 password: zo56FhH!?T (o eleitor é menor de idade)
+Kelson Fortunato nº cartão do cidadão: 16340063 password: #DXv!4=$eH (o eleitor é menor de idade)
