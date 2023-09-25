@@ -17,7 +17,7 @@ public class Miner {
      * @param difficulty
      * @returns the nonce value for the block 
      */
-    public static int getNonce(Elector eleitor, Candidato candidato, int difficulty){
+    public static int getNonce(String data, int difficulty){
         //String of zeros
         String zeros = String.format("%0" + difficulty + "d", 0);
         
@@ -25,7 +25,7 @@ public class Miner {
         int nonce = 0;
         
         while(nonce < MAX_NONCE){
-            String hash = Hash.getHash(nonce + eleitor.getNome() + candidato.getNome());
+            String hash = Hash.getHash(nonce + data);
             
             if(hash.endsWith(zeros)){
                 return nonce;

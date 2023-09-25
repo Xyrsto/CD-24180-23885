@@ -14,8 +14,7 @@ public class VotoBlock {
     String previousHash; //link to previous hash
     int nonce; //discovered number (proof of work)
     String currentHash; //hash of the current block
-    Candidato candidato;
-    Elector eleitor;
+    String data;
     /**
     * 
     * @param previousHash
@@ -24,23 +23,21 @@ public class VotoBlock {
     * @param eleitor
     * Class constructor
     */   
-    public VotoBlock(String previousHash,int nonce, Candidato candidato, Elector eleitor){
+    public VotoBlock(String previousHash, String data, int nonce){
         this.previousHash = previousHash;
         this.nonce = nonce;
         this.currentHash = calculateHash();
-        this.candidato = candidato;
-        this.eleitor = eleitor;
+        this.data = data;
     }
     
     /**
      * @returns the hashed value of the current block hash(nonce + previousHash + data) 
      */
     public String calculateHash(){
-        return Hash.getHash(nonce + previousHash + candidato + eleitor);
+        return Hash.getHash(nonce + previousHash + data);
     }
     
     public String toString() {
-        String data = eleitor.getNome() + ", " + candidato.getNome();
         return // (isValid() ? "OK\t" : "ERROR\t")+
                  String.format("[ %8s", previousHash) + " <- " + 
                    String.format("%-10s", data) +  String.format(" %7d ] = ", nonce) + 
