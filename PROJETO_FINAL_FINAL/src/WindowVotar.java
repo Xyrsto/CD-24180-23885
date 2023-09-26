@@ -30,6 +30,7 @@ public class WindowVotar extends javax.swing.JFrame {
 
     public WindowVotar() {
         initComponents();
+        jTextArea1.setText(myElection.chainToString());
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         // Abre a janela inicial no centro do ecrã
         setLocationRelativeTo(null);

@@ -1,5 +1,12 @@
 
 import classesEleicao.Eleicao;
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -18,6 +25,7 @@ public class WindowGerir extends javax.swing.JFrame {
     GerirRemoverEleitor gRE = new GerirRemoverEleitor();
     GerirRemoverCandidato gRC = new GerirRemoverCandidato();
     WindowEditorEleitor wee = new WindowEditorEleitor();
+    public JFileChooser fc = new JFileChooser();
 
     public WindowGerir() {
         initComponents();
@@ -210,6 +218,7 @@ public class WindowGerir extends javax.swing.JFrame {
 
     private void carregarElecBotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carregarElecBotActionPerformed
         myElection.carregaEleicao();
+        
     }//GEN-LAST:event_carregarElecBotActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

@@ -25,9 +25,9 @@ public class VotoBlock {
     */   
     public VotoBlock(String previousHash, String data, int nonce){
         this.previousHash = previousHash;
+        this.data = data;
         this.nonce = nonce;
         this.currentHash = calculateHash();
-        this.data = data;
     }
     
     /**

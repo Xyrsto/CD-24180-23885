@@ -171,6 +171,7 @@ public class Eleicao implements Serializable
                 byte[] dados = Files.readAllBytes(paths);
                 ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(dados));
                 updatedEleicao = (Eleicao)ois.readObject();
+                
                 //this.candidatos = (ArrayList<Candidato>) ois.readObject();
             } catch (Exception e) {
                 
